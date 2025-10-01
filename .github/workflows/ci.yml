@@ -1,4 +1,4 @@
-name: Wisecow CI
+name: Wisecow CI/CD
 
 on:
   push:
@@ -23,7 +23,9 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t your-dockerhub-username/wisecow:latest .
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/wisecow:latest .
 
       - name: Push Docker image
-        run: docker push your-dockerhub-username/wisecow:latest
+        run: |
+          docker push ${{ secrets.DOCKER_USERNAME }}/wisecow:latest
