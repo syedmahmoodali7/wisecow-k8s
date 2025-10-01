@@ -1,3 +1,8 @@
+### KubeArmor Policy Test
+
+![Policy Applied](screenshots/KubeArmor-in-action.png)
+![Blocked File Creation](screenshots/KubeArmor-in-action.png)
+
 # Cow wisdom web server
 
 ## Prerequisites
